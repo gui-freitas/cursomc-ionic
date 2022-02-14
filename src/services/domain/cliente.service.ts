@@ -22,4 +22,15 @@ export class ClienteService{
         let url = `${API_CONFIG.cloudUrl}/cp${id}.jpg`;
         return this.http.get(url, {responseType : 'blob'});
     }
+
+    insert(obj: ClienteDTO){
+        return this.http.post(
+            `${API_CONFIG.baseUrl}/clientes`,
+            obj,
+            {
+                observe: 'response',
+                responseType: 'text'
+            }
+        );
+    }
 }
