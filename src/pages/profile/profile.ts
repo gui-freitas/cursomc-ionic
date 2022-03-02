@@ -70,6 +70,7 @@ export class ProfilePage {
         this.picture = 'data:image/jpeg;base64,' + imageData;
         this.cameraOn = false;
     }, (err) => {
+      this.cameraOn = false;
       console.log("err + " + err);
     })
     .catch((err) => {
@@ -106,6 +107,7 @@ export class ProfilePage {
         this.picture = 'data:image/jpeg;base64,' + imageData;
         this.cameraOn = false;
     }, (err) => {
+      this.cameraOn = false;
       console.log("err + " + err);
     })
     .catch((err) => {
